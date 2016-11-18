@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<body>
+<style>
+	*{margin:0;padding:0;}
+</style>
+<canvas id="can" width="700" height="500" style="background:#111"></canvas>
+<script>
+ var ctx = document.getElementById('can').getContext('2d');
+ var oDiv=document.querySelector('#box');
+ 
+function rnd(n,m){
+	return parseInt(Math.random()*(m-n)+n);
+}
+
+	var ctx = document.getElementById('can');
+	var gc = ctx.getContext('2d');
+	var arr = [150,38,200,109,154,270,300,250,245];
+	var iMax = Math.max.apply(null,arr);
+	var aHeight = [];
+	for(var i=0;i<arr.length;i++){
+		aHeight.push(arr[i]/iMax*ctx.height);
+	}
+	//图+缝隙一共分为4份，图3份，缝隙1份
+	var space = ctx.width/(arr.length*4-1);
+	var w = space*3;
+	
+	for(var i=0;i<aHeight.length;i++){
+		gc.fillStyle='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+		gc.fillRect(i*4*space,ctx.height-aHeight[i],w,aHeight[i]);
+	}
+
+</script>
+
+</body>
+
+</html>

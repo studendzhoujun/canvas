@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html>
+<body>
+<canvas id="can" width="400" height="400" style="background:#111"></canvas>
+<script>
+ var ctx = document.getElementById('can').getContext('2d');
+  function draw() {
+    for (var i=0;i<6;i++){
+      for (var j=0;j<6;j++){
+        ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + 
+                         Math.floor(255-42.5*j) + ')';
+        ctx.beginPath();
+        ctx.arc(100+j*25,100+i*25,10,0,Math.PI*2,true);
+        ctx.stroke();
+      }
+    }
+  }
+draw();
+</script>
+
+</body>
+
+</html>

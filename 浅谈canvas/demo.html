@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html>
+<body>
+<canvas id="can" width="400" height="400" style="border:5px solid red;margin:100px 0 0 100px;background:url(3.jpg);"></canvas>
+<script>
+ var ctx = document.getElementById('can').getContext('2d');
+
+ console.log(ctx)
+
+ ctx.arc(100,100,50,0,Math.PI*2,true);
+
+ ctx.strokeStyle='blue';
+ 
+ ctx.lineWidth=10;
+
+ ctx.stroke();
+</script>
+
+</body>
+
+</html>

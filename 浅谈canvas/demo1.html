@@ -1,0 +1,19 @@
+
+<!doctype html>
+<html>
+<body>
+<canvas id="can" width="400" height="400" style="background:#679"></canvas>
+<script>
+ var ctx = document.getElementById('can').getContext('2d');
+    //绘制填充的矩形
+    ctx.fillRect(100,100,100,100);
+    //清除指定矩形区域
+    ctx.clearRect(125,125,50,50);
+    //绘制矩形边框
+    ctx.strokeRect(75,75,150,150);
+
+</script>
+
+</body>
+
+</html>
